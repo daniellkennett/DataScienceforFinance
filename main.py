@@ -5,9 +5,7 @@ Output should be a csv or xslx for ML processing
 """
 import pandas as pd
 import numpy as np
-# import torch
-# from sklearn.linear_model import ElasticNet
-# from sklearn.preprocessing import StandardScaler
+
 
 def clean_fama_french():
     fama_french = pd.read_csv('data/F-F_Research_Data_5_Factors_2x3.csv')
@@ -35,12 +33,6 @@ def clean_predict_factors():
     return predictor_factors
 
 
-# In sample vs Out of sample
-# [180:] # 20% - test/Out of Sample
-# X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=100)
-
-# scaler = StandardScaler()
-# scaler.fit(X_train)
 
 if __name__ == "__main__":
     fama_french = clean_fama_french()
