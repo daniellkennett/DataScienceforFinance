@@ -23,6 +23,7 @@ split_index = round(len(data_df.index)*.8)
 y_train, y_test  = y[:split_index], y[split_index:]
 X_train, X_test = X[:split_index], X[split_index:]
 
+print(f"Train date range: {data_df['date'][0]} - {data_df['date'][split_index-1]}\nTest date range: {data_df['date'][split_index]} - {data_df['date'].iloc[-1]}")
 # NORMALIZE!!!
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
