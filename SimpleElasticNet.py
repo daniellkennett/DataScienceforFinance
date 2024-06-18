@@ -40,7 +40,7 @@ param_grid = {
 
 # Initialize GridSearchCV
 EN = ElasticNet(random_state=0, max_iter=10000)
-grid_search = GridSearchCV(EN, param_grid, cv=5, scoring='neg_mean_squared_error')
+grid_search = GridSearchCV(EN, param_grid, cv=5, scoring='r2')
 grid_search.fit(X_train, y_train)
 
 # Get the best parameters
